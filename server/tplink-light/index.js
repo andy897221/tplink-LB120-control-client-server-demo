@@ -3,9 +3,9 @@ var app = require('express')();
 var http = require('http').Server(app);
 
 const Bulb = require('tplink-lightbulb')
-var andyLight = new Bulb("192.168.0.150")
-var candyLight = new Bulb("192.168.0.178")
-var MECdemo = new Bulb("192.168.3.110")
+var lightOne = new Bulb("0.0.0.0")
+var lightTwo = new Bulb("0.0.0.0")
+var lightThree = new Bulb("0.0.0.0")
 
 // toggle light related function
 function changeStatus(status,res, light) {
@@ -58,12 +58,12 @@ app.get('/', function(req, res){
     }
     
     // to see which light bulb to request
-    if(lightHeader == "andyLight")
-        var light = andyLight
-    else if(lightHeader == "candyLight")
-        var light = candyLight
-    else if(lightHeader == "MECdemo")
-        var light = MECdemo
+    if(lightHeader == "lightOne")
+        var light = lightOne
+    else if(lightHeader == "lightTwo")
+        var light = lightTwo
+    else if(lightHeader == "lightThree")
+        var light = lightThree
     
     // logging
     var logging = util.format('Requested. Client: %s. Light: %s. Action: %s',clientHeader,lightHeader,actionHeader)
