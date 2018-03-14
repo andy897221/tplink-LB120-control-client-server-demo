@@ -1,8 +1,12 @@
 # tplink-toggleLight-client-server-demo
 server and client demo using the npm library tplink-lightbulb
+
 the library gives the ability to control tplink smart light bulb (LB series) using nodejs
+
 the library:
+
 https://www.npmjs.com/package/tplink-lightbulb
+
 https://github.com/konsumer/tplink-lightbulb
 
 Description:
