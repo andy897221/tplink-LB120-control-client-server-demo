@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendGETToggle() {
         final RequestQueue queue = Volley.newRequestQueue(this);
-        final String url = "http://192.168.0.143:3000";
+        // server ip with the local network
+        final String url = "http://0.0.0.0:3000";
         StringRequest getRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
