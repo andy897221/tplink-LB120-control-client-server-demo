@@ -3,6 +3,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 
 const Bulb = require('tplink-lightbulb')
+// ip of the light bulb connected to the local network
 var lightOne = new Bulb("0.0.0.0")
 var lightTwo = new Bulb("0.0.0.0")
 var lightThree = new Bulb("0.0.0.0")
